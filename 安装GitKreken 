@@ -1,9 +1,10 @@
+一，安装
+
 1,去官网下载GitKraken
 
 官网链接：https://www.gitkraken.com/git-client
 
 最终的下载软件安装包：gitkraken-amd64.deb
-
 
 2,按下列步骤执行安装
 
@@ -12,3 +13,16 @@
 2.3 如果有错误，执行修复命令：sudo apt-get install -f
 
 3,安装完成。
+
+二，卸载
+
+1,打开终端
+
+2,输入命令：sudo apt-get autoremove --purge gitkraken-amd64.deb
+(
+    sudo:获取root权限
+    apt-get：执行安装与卸载功能的软件
+    autoremove:告诉apt-get,我们是移除软件
+    --purge:完整，干净，彻底的移除
+    gitkraken-amd64.deb：被卸载软件的名称
+)
