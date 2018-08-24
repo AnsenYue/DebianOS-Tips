@@ -1,0 +1,14 @@
+1,去官网下载GitKraken
+
+官网链接：https://www.gitkraken.com/git-client
+
+最终的下载软件安装包：gitkraken-amd64.deb
+
+
+2,按下列步骤执行安装
+
+2.1 进入安装包目录
+2.2 执行软件包安装命令：sudo dpkg -i gitkraken-amd64.deb
+2.3 如果有错误，执行修复命令：sudo apt-get install -f
+
+3,安装完成。
