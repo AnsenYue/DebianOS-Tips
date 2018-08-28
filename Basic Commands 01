@@ -1,0 +1,189 @@
+说明：
+- ？/--？ 同一个命令，前一个代表简称，后一个代表全称
+
+======================================================
+
+Command su
+
+Usage: su [options] [LOGIN]
+
+Options:
+-c/--command : pass command to the invoked shell
+-h/--help    : display this help message and exit
+-/-l/--login : make the shell a login shell 
+-m/-p        : do not reset environment variables and keep the same shell 
+-s/--shell   : use shell instead of the default in password 
+
+======================================================
+
+Software pakeage APT
+
+Most used Commands:
+
+apt list  : list packages based on package names
+apt search: search in package descriptions
+apt show  : show package details
+apt install : install packages
+apt remove  : remove packages 
+apt autoremove : remove automatically all unused packages
+apt update  : updtae list of available packages
+apt upgrade : upgrade the system by installing/upgrading packages 
+apt full-upgrade : upgrade the system by removing/instaling/upgrading packages
+apt edit-sources : deit the source information file
+
+======================================================
+
+Command :ls -[d][l][c][b][p][s]
+
+- : normal file
+d : directory
+l : symlink
+c : symlink 
+b : block device node
+p : named pipe
+s : socket
+
+Note: you can combine two different commands
+======================================================
+
+filesystem permissions:
+
+User categories: 
+User : u  /the user who owns the file 
+Group: g  /Other users ing the group which the file belongs to 
+Other: o  /all other users also referred to as "world" and everyone
+
+File permissions:
+Read : r  /allows owner to examine contents of the file
+Write : w  /allows owner to modify the file
+Execute : x /allows owner to run the file as a command 
+
+Directory permissions:
+Read : r /allows owner to list contents of the directory 
+Write : w /allows owner to add or remove files in the directory
+Execute : x /allows owner to access files in the directory 
+
+------------------------------------------------------
+
+permission change commands:
+
+chown 
+
+Define :change the owner and/or group of each file to owner and/or Group 
+
+Usage : chown [option]...[owner][:[group]] file 
+  or  : chown [option]...--reference=rfile file
+
+
+chgrp 
+
+Define :change the group of ecah file to group 
+
+Usage : chgrp [option] ... group file 
+  or  : chgrp [option] ... --reference =RFILE file...
+
+
+chmod
+
+Define :change the mode of each file to mode
+
+Usage :chmod [option] ... mode[,mode]... file...
+  or  :chmod [option] ... octal-mode file...
+  or  :chmod [option] ... --reference=RFILE file
+
+Note : More Details,please see help file !
+======================================================
+
+file access commands 
+
+dialout : full and direct access to serial ports
+dip     : limited access to serial ports for Dialup IP connection to tursted peers 
+cdrom   : cd-rom,dvd +/-Rw drives
+audio   : audio device 
+video   : video device 
+scanner : scanners
+adm     : system monitoring logs
+staff   : some directory for junior administrative work 
+
+particular command 
+
+sudo : execute sudo without their password
+lpadmin : execute commands to add,modify,and remove printers from printer database
+
+three type of timestamps 
+
+mtime : the file modification time (ls -l)
+ctime : the file status change time (ls -lc)
+atime : the last file access time (ls -lu)
+
+
+Note : More Details,please see help file !
+======================================================
+
+List of basic Unix commands
+
+pwd                         : display name of current/working directory
+whoami                      : display current user name 
+id                          : display current user identity
+file <file>                 : display a type of file for the file "<file>"
+type -p <command name>      : display a file location of command "<command name>"
+which <command name>        : display a file location of command "<command name>"
+type <command name >        : display information on command "<command name >"
+apropos <key-word>          : find commands related to "<key-word>"
+mak -k <key-word>           : find command related to "<key-word>"
+whatis <command name>       : display on line explanation on command "<command name>"
+man -a <command name>       : display explanation on command "<command name>:(Unix sytle)
+info <command name>         : display rather long explanation on command "<command name>"(GNU style)
+ls                          : list contents of directory (non-dot files and direcotries)
+ls -a                       : list contents of directory (all files and directories)
+ls -A                       : list contents of directory (almost all files and directories)
+ls -la                      : lsit all contents of directory with detail information 
+ls -lai                     : lsit all contents of dirctory with inode number and detail informantion 
+ls -d                       : lsit all direcotries under the current directory 
+tree                        : display file tree contents
+lsof <file>                 : list open status of file
+lsof -p <pid>               : list files opened by the process id
+mkdir <file>                : make a new directory "<file>" in the current directory 
+rmdir <file>                : remove a directory "<file>" in the current directory 
+cd <file>                   : change directory to the directory "<file>" in the current directory or in the directory listed in the variable "$cdpath"
+cd /                        : change directory to the root directory 
+cd                          : change directory to the current user's home directory 
+cd /<path>                  : change directory to the absolute path directory "<path>"
+cd ..                       : change directory the parent directory 
+cd -                        : change directory to the previous directory 
+touch <junkfile>            : create a empty file "<junkfile>"
+cp <exist_file> <new_file>  : copy a existing file <exist_file> to a new file <new_file>
+rm <junkfile>               : remove a file <junkfile>
+mv <exist_file> <new_file>  : rename an existing file <exist_file> to a new name <new_file>(<new_file> must not exist)
+mv <exist_file> <new_location>  : move an existing file <exist_file> to a new location <new_location>(the directory <new_location> must exist)
+mv <exist_file> <new_location>/<new_name> : move an existing file <exist_file> to a new location <new_location> with a new name <new_name>(the directory <new_location> must exist but the directory <new_location>/<new_name> must not exist )
+find . -name <file_name>    : find matching <file_name>
+grep -e "<file_name>" *.html : find a <file_name> in all files ending with ".html" in current direcotry and display them all 
+top                         : display process information using full screen ,type "q" to quit 
+ps aux | pager              : display information on all the running processes using BSD style output
+ps -ef | pager              : display information on all the running processes using Unix system-V style output
+ps aux | grep -e "[e]xim4*" : display all the processes running "exim" and "exim4"
+kill <pid_number>           : kill aprocess identified by the process ID <pid_number>
+gzip <file_name>            : compress <file_name> to create <file_name>.gz using the lempel-ziv coding
+gunzip <file_name>.gz       : decompress <file_name>.gz to create <file_name>
+bzip2 <file_name>           : compress <file_name> to create <file_name>.bz2 using the Burrows-wheeler block sorting text compress algorithm and huffman coding
+bunzip2 <file_name>.bz2     : decompress <file_name>.bz2 to create <file_name> 
+xz <file_name>              : compress <file_name> to create <file_name>.xz using the lempel-Ziv-markov chain algorithm 
+unxz <file_name>.xz         : decompress <file_name>.xz to create <file_name>
+tar -xvf <file_name>.tar    : extract files from <file_name>.tar archive
+tar -xvzf <file_name>.tar.gz : extract files from gzipped <file_name>.tar.gz archive
+tar -xvjf <file_name>.tar.bz2 : extract files from <file_name>.tar.bz2 archive
+tar -xvJf <file_name>.tar.xz : extract files from <file_name>.tar.xz archive
+tar -cvf <file_name>.tar <directory_contents>/ : archive contents of folder <directory_contents> in <file_name>.tar archive
+tar -cvzf <file_name>.tar.gz <directory_contents>/ : archive contents of folder <directory_contents> in <file_name>.tar.gz archive
+tar -cvjf <file_name>.tar.bz2 <directory_contents>/ : archive contents of folder <directory_contents> in <file_name>.tar.bz2 archive
+tar -cvJf <file_name>.tar.xz <directory_contents>/ : archive contents of folder <directory_contents> in <file_name>.tar.xz archive
+zcat README.gz | pager      : display contents of compresse "README.gz" using the default pager 
+zcat README.gz > <file>     : create a file <file> with the decompressed content of "README.gz"
+zcat README.gz >> <file>    : append the decompressed content of "README.gz" to the end of the file <file>(if it does not exist, create it firset)
+
+
+
+
+
+
