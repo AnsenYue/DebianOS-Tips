@@ -182,6 +182,111 @@ zcat README.gz | pager      : display contents of compresse "README.gz" using th
 zcat README.gz > <file>     : create a file <file> with the decompressed content of "README.gz"
 zcat README.gz >> <file>    : append the decompressed content of "README.gz" to the end of the file <file>(if it does not exist, create it firset)
 
+Note : More Details,please see help file !
+======================================================
+
+shell glob patterns
+
+*           : filename/segment not started with "."
+.*          : filename/segment started with "."
+?           : exactly one character
+[...]       : exactly one character with any character enclosed in brackets
+[a-z]       : exactly one character with any character between "a" and "z"
+[^...]      : exactly one character other than any character enclosed in brackets(excluding "~")
+
+Note : More Details,please see help file !
+======================================================
+
+shell command idioms
+
+command &               : background execution of command in the subshell
+command1 | command 2    : pipe the standard output of command1 to the standard input of command2(concurrent execution)
+command1 2>&1 | command2: pipe both standard output and standard error of command1 to the standard input of command2(concurrent execution)
+command1 ; command2     : execute command1 and command2 sequentially
+command1 && command2    : execute command1; if successful,execute command2 sequentially (return success if command1 or command2 are successful)
+command1 || command2    : execute command1; if not successful,execute command2 sequentially (return success if command1 or command2 are successful)
+command > file_name     : redirect standard output of command to a file file_name(overwrite)
+command 2> file_name    : redirect standard error of command to a file file_name(overwrite)
+command >> file_name    : redirect standard output of command to a file file_name(append)
+command 2>> file_name   : redirect standard error of commmand to a file file_name(append)
+command > file_name 2>&1: redirect both standard output and standard error of command to a file file_name 
+command < file_name     : redirect standard input of command to a file file_name 
+command << delimiter    : redirect standard input of command to the following lines until "delimiter" is met(here document)
+command <<- delimiter   : redirect standard input of command to the following lines until "delimiter" is met(her document ,the leading tab chaaracters are stripped from input lines )
+
+Note : More Details,please see help file !
+======================================================
+
+predefined file descriptors
+
+device      description         file descriptor 
+stdin       standard input      0
+stdout      standard output     1
+stderr      standard error      2
+
+Note : More Details,please see help file !
+======================================================
+
+unix text tools
+
+No regular expression 
+
+cat   : concatenates files and outputs the whole content
+tac   : conactenates files and outputs in reverse
+cut   : selects parts of lines and outputs 
+head  : outputs the first part of files
+tail  : outputs the last part of files
+sort  : sorts lines of text files
+uniq  : removes duplicate lines from a sorted file
+tr    : translates or delets characters 
+diff  : compares files line by line
+
+Baisc regular expression (BRE)
+
+grep  : matches text with patterns
+ed    : a primitive line editor 
+sed   : a stream editor
+vim   : a screen editor 
+emacs : a screen editor.(somewhat extended BRE )
+
+
+Extended regular expression (ERE)
+
+egrep : matches text with patterns 
+awk   : does simple text processing 
+tcl(3tcl) : can do every conceivable text processing 
+perl  : can do every conceivable text processing 
+pcregrep : 
+python :
+
+
+Note : More Details,please see help file !
+======================================================
+
+description of the regular experssion                                       BRE                                  ERE 
+
+common metacharacters                                                       \,.,[,],^,$,*                        \,.,[,],^,$,*  
+BRE only "\" escaped metacharacters                                         \+,\?,\(,\),\{,\},\|                 
+ERE only not-"\" escaped metacharacters                                                                          +,?,(,),{,},|
+match not-metacharacter "c"                                                 c                                    c
+match a literal character "c" even if "c" is metacharacter by itself        \c                                   \c
+match any characters including newline                                      .                                    .
+position at the beginning of a string                                       ^                                    ^
+position at the end of a string                                             $                                    $
+position at the beginning of a word                                         \<                                   \<
+position at the end of a word                                               \>                                   \>
+match any characters in "abc..."                                            [abc...]                             [abc...]
+match any characters except in "abc..."                                     [^abc...]                            [^abc...]
+match zero or more regular expressions identified by "r"                    r*                                   r*
+match one or more regular expressions identified by "r"                     r\+                                  r+
+match zero or one regular expressions identified by "r"                     r\?                                  r?
+match one of the regular expressions identified by "r1" or "r2"             r1\|r2                               r1|r2
+match one of the regular expressions identified by "r1" or "r2" and         \(r1\|r2\)                           (r1|r2)
+treat it as a bracketed regular expression 
+
+
+Note : More Details,please see help file !
+======================================================
 
 
 
