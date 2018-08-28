@@ -1,0 +1,24 @@
+List of key binding for mc
+
+F1 : help menu 
+F3 : internal file viewer
+F4 : internal editor
+F9 : activate pull down menu 
+F10 : exit midnight commander
+Tab : move between two windows
+Insert or Ctrl-T : mark file for a multiple-file operation susch as copy
+Del : delete file (be careful--set mc to safe delete mode)
+
+
+List of key bindings for bash
+
+Ctrl-U : erase line before cursor
+Ctrl-H : erase a character before cursor 
+Ctrl-D : terminate input(exit shell if you are using shell)
+Ctrl-C : terninate a running program
+Crtl-Z : temporarily stop program by moving it to the background job
+Crtl-S : halt output to screen 
+Ctrl-Q : reactivate output to screen
+Ctrl-Alt-Del : reboot/halt the system
+Ctrl-R : start incremental command history search under bash
+

@@ -1,0 +1,18 @@
+simple command : a sequence of components
+
+1,Variable assignments(optional)
+2,Command name
+3,Arguments (optional)
+4,Redirections (optional:>,>>,<,<<,etc.)
+5 Control operator (Optional :&&,||,<newline>,;,&,(,))
+
+=====================================================================================
+
+Language Variable(%lang) consists of three part :xx_YY.ZZZZ
+
+xx    : ISO 639 language codes (lower case) such as "en"
+YY    : ISO 3166 country codes (upper case) such as "US"
+ZZZZ  : codeset,always set to "UTF-8"
+
+=====================================================================================
+
